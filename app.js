@@ -1,3 +1,10 @@
-console.log("a");
-console.log("b");
-console.log("c");
+const express = require('express');
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send('헬로월드')
+});
+
+app.listen(3000, () => {
+  console.log('http://localhost:3000/')
+})
