@@ -18,6 +18,7 @@
   "homepage": "https://github.com/kdt-ful-class-three-group/prac-11-express#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1"
   }
 }
