@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card {
+  width: 500px;
+  height: 500px;
+  background-color: #c8c8c8;
+  border-radius: 10px;
+  box-shadow: 2 2 2 2 black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
