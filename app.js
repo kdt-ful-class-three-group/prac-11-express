@@ -10,11 +10,11 @@ app.set('view engine', 'handlebars');
 app.set('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {title: 'home'});
 });
 
 app.get('/*', (req, res) => {
-  res.render(req.url.split('/')[1]);
+  res.render(req.url.split('/')[1], {title: req.url.split('/')[1]});
 });
 
 app.listen(3000, () => {
