@@ -10,7 +10,7 @@ app.set('view engine', 'handlebars');
 app.set('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {title: "제목", main: "메인내용이오"});
 });
 
 app.get('/*', (req, res) => {
