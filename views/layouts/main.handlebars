@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{{title}}}</title>
+    <title>{{title}}</title>
     <style>
         body {
             margin: 0;
@@ -20,7 +20,7 @@
 
         main {
             width: 100vw;
-            height: 90vh;
+            height: 85vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,6 +45,11 @@
             border-right: none;
         }
 
+        a:hover {
+            background-color: rgb(85, 85, 85);
+            width: 30%;
+        }
+
         #root {
             display: flex;
             flex-direction: column;
@@ -54,20 +59,29 @@
             height: 500px;
             background-color: rgb(255, 255, 255);
             border-radius: 10%;
+            box-shadow: 5px 5px 5px rgb(80, 80, 80);
+            text-shadow: 2px 2px 2px rgb(80, 80, 80);
+        }
+
+        footer {
+            width: 100vw;
+            height: 5vh;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color: white;
+
         }
     </style>
 </head>
 <body>
-    <header>
-        <a href="/">HOME</a>
-        <a href="first">First</a>
-        <a href="second">Second</a>
-        <a href="third">Third</a>
-    </header>
+        {{>header}}
     <main>
     <div id="root">
         {{{body}}}
     </div>
     </main>
+        {{>footer}}
 </body>
 </html>

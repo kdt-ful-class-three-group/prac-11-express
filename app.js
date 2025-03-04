@@ -4,10 +4,16 @@ const { engine } = require('express-handlebars');
 
 const app = express();
 
-app.engine('handlebars', engine());
+app.engine('handlebars', engine(
+  {
+    defaultLayout: 'main',
+    layoutsDir: __dirname + '/views/layouts',
+    partialsDir: __dirname + '/views/partials'
+  }
+));
 // ? handlebars를 함수로 쓰고 있는건가?
 app.set('view engine', 'handlebars');
-app.set('views', './views');
+app.set('views', __dirname + '/views');
 
 app.get('/', (req, res) => {
     res.render('home', {title: 'home'});
