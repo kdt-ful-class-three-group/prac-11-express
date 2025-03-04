@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/*', (req, res) => {
+  res.render(req.url.split('/')[1]);
+});
+
 app.listen(3000, () => {
   console.log('http://localhost:3000/')
 });
